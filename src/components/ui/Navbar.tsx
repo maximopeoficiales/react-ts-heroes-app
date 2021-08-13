@@ -48,6 +48,13 @@ const Navbar = (props: MyProps) => {
                   >
                     DC
                   </NavLink>
+                  <NavLink
+                    activeClassName="bg-gray-900"
+                    to="/search"
+                    className="px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
+                  >
+                    Search
+                  </NavLink>
                 </div>
               </div>
             </div>
@@ -86,6 +93,14 @@ const Navbar = (props: MyProps) => {
               className="block px-3 py-2 text-base font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
             >
               DC
+            </NavLink>
+
+            <NavLink
+              activeClassName="bg-gray-900"
+              to="/search"
+              className="block px-3 py-2 text-base font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
+            >
+              Search
             </NavLink>
           </div>
         </div>

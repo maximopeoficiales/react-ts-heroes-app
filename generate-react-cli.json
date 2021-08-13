@@ -8,7 +8,7 @@
       "customTemplates": {
         "component": "src/templates/component/TemplateName.tsx"
       },
-      "path": "src/components/heroes",
+      "path": "src/components/search",
       "withStyle": false,
       "withTest": true,
       "withStory": false,

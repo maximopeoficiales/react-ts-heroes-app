@@ -16,6 +16,7 @@ const HeroCard = (props: MyProps) => {
       className="flex my-2 bg-gray-100 rounded-lg shadow-lg column"
     >
       <img
+        loading="lazy"
         src={`./assets/heroes/${id}.jpg`}
         alt={id}
         className="object-cover object-top w-1/2 h-auto rounded-lg rounded-b-none"
