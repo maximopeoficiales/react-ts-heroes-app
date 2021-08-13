@@ -1,0 +1,9 @@
+.card-heroe-filter {
+  transition-delay: 1.5;
+  transition: 1.5s;
+  filter: grayscale(60%);
+}
+.card-heroe-filter:hover {
+  filter: grayscale(0%);
+  transform: scale(1.1);
+}

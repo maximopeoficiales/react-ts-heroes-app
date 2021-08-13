@@ -1,11 +1,11 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
-import DcScreen from './DcScreen';
+import DCScreen from './DcScreen';
 
 describe('<DcScreen />', () => {
   test('it should mount', () => {
-    render(<DcScreen />);
+    render(<DCScreen />);
     
     const dcScreen = screen.getByTestId('DcScreen');
 

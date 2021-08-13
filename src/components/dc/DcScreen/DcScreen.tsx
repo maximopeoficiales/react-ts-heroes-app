@@ -1,19 +1,21 @@
 import { TypeHeroe } from "../../../enums/TypeHeroe";
 import HeroList from "../../heroes/HeroList/HeroList";
+import Container from "../../utils/Container/Container";
+import Title from "../../utils/Title/Title";
 
 interface MyProps {}
 const defaultProps: MyProps = {};
-const DcScreen = (props: MyProps) => {
+const DCScreen = (props: MyProps) => {
   props = { ...defaultProps, ...props };
   const {} = props;
   return (
     <div data-testid="DcScreen" className="row justify-content-center">
-      <div className="col-md-10">
-        <h1>DcScreen component</h1>
+      <Container>
+        <Title title={"DC Comics"} />
         <HeroList publisher={TypeHeroe.DC} />
-      </div>
+      </Container>
     </div>
   );
 };
 
-export default DcScreen;
+export default DCScreen;

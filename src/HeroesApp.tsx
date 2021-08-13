@@ -2,7 +2,7 @@ import { AppRouter } from "./routers/AppRouter";
 
 function HeroesApp() {
   return (
-    <div className="App">
+    <div className="">
       <AppRouter />
     </div>
   );

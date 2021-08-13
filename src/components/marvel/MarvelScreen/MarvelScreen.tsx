@@ -1,5 +1,7 @@
 import { TypeHeroe } from "../../../enums/TypeHeroe";
 import HeroList from "../../heroes/HeroList/HeroList";
+import Container from "../../utils/Container/Container";
+import Title from "../../utils/Title/Title";
 
 interface MyProps {}
 const defaultProps: MyProps = {};
@@ -8,10 +10,11 @@ const MarvelScreen = (props: MyProps) => {
   const {} = props;
   return (
     <div data-testid="MarvelScreen" className="">
-      <h1>MarvelScreen component</h1>
-      <div className="">
+      <Container>
+        <Title title={"Marvel"}/>
+
         <HeroList publisher={TypeHeroe.MARVEL} />
-      </div>
+      </Container>
     </div>
   );
 };

@@ -1,6 +1,7 @@
 import { useMemo } from "react";
 import { Redirect, RouteComponentProps, useParams } from "react-router-dom";
 import { getHeroById } from "../../../selectors/getHeroById";
+import Container from "../../utils/Container/Container";
 
 interface MyProps extends RouteComponentProps<any> {}
 const defaultProps = {};
@@ -29,13 +30,15 @@ const HeroScreen = (props: MyProps) => {
   };
   // falta realizar diseño
   return (
-    <div data-testid="HeroesScreen" className="row justify-content-center">
-      <div className="col-md-10">
-        <button onClick={handlerReturn}>Return</button>
+    <Container>
+      <div data-testid="HeroesScreen" className="row justify-content-center">
+        <div className="col-md-10">
+          <button onClick={handlerReturn}>Return</button>
 
-        <h1>{superhero}</h1>
+          <h1>{superhero}</h1>
+        </div>
       </div>
-    </div>
+    </Container>
   );
 };
 
