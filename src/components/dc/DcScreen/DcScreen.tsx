@@ -7,7 +7,7 @@ interface MyProps {}
 const defaultProps: MyProps = {};
 const DCScreen = (props: MyProps) => {
   props = { ...defaultProps, ...props };
-  const {} = props;
+  // const {} = props;
   return (
     <div data-testid="DcScreen" className="row justify-content-center">
       <Container>

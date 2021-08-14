@@ -1,7 +1,6 @@
 import queryString from "query-string";
 import { useMemo } from "react";
 import { RouteComponentProps, useLocation } from "react-router-dom";
-import { heroes } from "../../../data/heroes";
 import { useForm } from "../../../hooks/useForm";
 import { getHeroSearch } from "../../../selectors/getHeroSearch";
 import HeroCard from "../../heroes/HeroCard/HeroCard";
@@ -15,7 +14,7 @@ const SearchScreen = (props: MyProps) => {
 
   const { history } = props;
 
-  const { formValues, handlerChange, resetForm } = useForm<{ search: string }>({
+  const { formValues, handlerChange } = useForm<{ search: string }>({
     search: q,
   });
 

@@ -7,7 +7,7 @@ interface MyProps {}
 const defaultProps: MyProps = {};
 const MarvelScreen = (props: MyProps) => {
   props = { ...defaultProps, ...props };
-  const {} = props;
+  // const {} = props;
   return (
     <div data-testid="MarvelScreen" className="">
       <Container>

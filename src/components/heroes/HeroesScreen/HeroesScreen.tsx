@@ -18,7 +18,7 @@ const HeroScreen = (props: MyProps) => {
     return <Redirect to={"/"} />;
   }
 
-  const { superhero, alter_ego, characters, first_appearance } = { ...hero };
+  const { superhero } = { ...hero };
 
   const handlerReturn = () => {
     // evita el error cuando esta en incognito

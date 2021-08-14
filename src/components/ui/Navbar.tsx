@@ -7,7 +7,7 @@ interface MyProps {}
 const defaultProps: MyProps = {};
 const Navbar = (props: MyProps) => {
   props = { ...defaultProps, ...props };
-  const {} = props;
+  // const {} = props;
   const history = useHistory();
   const { user, dispatch } = useContext(AuthContext);
   const handlerLogout = () => {

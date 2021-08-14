@@ -11,14 +11,15 @@ const LoginScreen = (props: MyProps) => {
   props = { ...defaultProps, ...props };
   const { history } = props;
 
-  const { user, dispatch } = useContext(AuthContext);
+  const { dispatch } = useContext(AuthContext);
 
   const handlerClick = () => {
-    // history.push("marvel");
+    // cuando haga login redireccionara a la ruta que quizo acceder
+    const lastPath = localStorage.getItem("lastPath") || "/";
     const userLogin: User = { name: "maximo", logged: true };
-    
+
     dispatch({ type: Action.LOGIN, payload: userLogin });
-    history.replace("/");
+    history.replace(lastPath);
   };
 
   return (
