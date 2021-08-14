@@ -1,10 +1,19 @@
-import { NavLink } from "react-router-dom";
+import { useContext } from "react";
+import { NavLink, useHistory } from "react-router-dom";
+import { AuthContext } from "../../auth/AuthContext";
+import { Action } from "../../auth/authReducer";
 
 interface MyProps {}
 const defaultProps: MyProps = {};
 const Navbar = (props: MyProps) => {
   props = { ...defaultProps, ...props };
   const {} = props;
+  const history = useHistory();
+  const { user, dispatch } = useContext(AuthContext);
+  const handlerLogout = () => {
+    dispatch({ type: Action.LOGOUT });
+    history.push("/login");
+  };
   return (
     <>
       <nav className="bg-gray-800">
@@ -59,12 +68,13 @@ const Navbar = (props: MyProps) => {
               </div>
             </div>
             <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-              <NavLink
-                to="/login"
+              {user && <p className="text-white">{user.name}</p>}
+              <button
+                onClick={handlerLogout}
                 className="px-3 py-2 font-bold text-white duration-75 ease-out delay-75 transform scale-100 bg-green-600 rounded-full active:scale-75 active:bg-green-800 "
               >
                 Logout
-              </NavLink>
+              </button>
             </div>
           </div>
         </div>
