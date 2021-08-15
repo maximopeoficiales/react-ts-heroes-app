@@ -18,7 +18,7 @@ const HeroCard = (props: MyProps) => {
     >
       <img
         loading="lazy"
-        src={`./assets/heroes/${id}.jpg`}
+        src={`/assets/heroes/${id}.jpg`}
         alt={id}
         className="object-cover w-full rounded-b-none rounded-xl h-96 card-heroe-filter"
       />
