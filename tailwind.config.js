@@ -18,6 +18,11 @@ module.exports = {
           DEFAULT: '#2A2A2A',
           dark: '#2A2A2A',
         },
+        heroBlackPrimary: {
+          light: '#2B2B2B',
+          DEFAULT: '#2B2B2B',
+          dark: '#2B2B2B',
+        },
         heroPrimary: {
           dark: '#0078F2',
           DEFAULT: '#0078F2',
@@ -33,6 +38,7 @@ module.exports = {
     extend: {
       backgroundColor: ['active'],
       scale: ['active'],
+      borderWidth: ['active','hover', 'focus'],
     }
   },
   plugins: [],
