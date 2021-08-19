@@ -1,6 +1,7 @@
 export enum Action {
     LOGIN = "login",
     LOGOUT = "logout",
+    DEFAULT = "",
 }
 export type User =
     {
