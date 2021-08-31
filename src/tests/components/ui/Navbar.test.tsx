@@ -31,6 +31,10 @@ describe("Pruebas en <Navbar/>", () => {
       </MemoryRouter>
     </AuthContext.Provider>
   );
+
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
   test("debe mostrarse correctamente", () => {
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.find(".text-info").text().trim()).toBe(

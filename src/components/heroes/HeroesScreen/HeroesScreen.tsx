@@ -1,14 +1,14 @@
 import { useMemo } from "react";
-import { Redirect, RouteComponentProps, useParams } from "react-router-dom";
+import { Redirect, useHistory, useParams } from "react-router-dom";
 import { getHeroById } from "../../../selectors/getHeroById";
 import Container from "../../utils/Container/Container";
 import HeroCard from "../HeroCard/HeroCard";
 
-interface MyProps extends RouteComponentProps<any> {}
+interface MyProps {}
 const defaultProps = {};
-const HeroScreen = (props: MyProps) => {
+const HeroesScreen = (props: MyProps) => {
   props = { ...defaultProps, ...props };
-  const { history } = props;
+  const history = useHistory();
 
   const { heroeId }: any = useParams();
   // const hero = getHeroById(heroeId);
@@ -24,6 +24,8 @@ const HeroScreen = (props: MyProps) => {
 
   const handlerReturn = () => {
     // evita el error cuando esta en incognito
+    console.log(history);
+    
     if (history.length <= 2) {
       history.push("/");
     } else {
@@ -82,4 +84,4 @@ const HeroScreen = (props: MyProps) => {
   );
 };
 
-export default HeroScreen;
+export default HeroesScreen;
