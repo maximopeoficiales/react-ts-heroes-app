@@ -1,9 +1,9 @@
 import { mount } from "enzyme";
 import React from "react";
 import { MemoryRouter, Router } from "react-router-dom";
-import { AuthContext } from "../../../auth/AuthContext";
-import { Action } from "../../../auth/authReducer";
-import Navbar from "../../../components/ui/Navbar";
+import { AuthContext } from "../../auth/AuthContext";
+import { Action } from "../../auth/authReducer";
+import Navbar from "../../components/ui/Navbar";
 import { History } from "history";
 
 describe("Pruebas en <Navbar/>", () => {

@@ -1,12 +1,14 @@
 import { useContext } from "react";
 import { useForm } from "../../../hooks/useForm";
-import { RouteComponentProps } from "react-router-dom";
 import { AuthContext } from "../../../auth/AuthContext";
 import { Action, User } from "../../../auth/authReducer";
 import Container from "../../utils/Container/Container";
+import { History } from "history";
 
 // de esta manera extiendo de RouteComponentProps
-interface MyProps extends RouteComponentProps<any> {}
+interface MyProps {
+  history: History;
+}
 
 const defaultProps = {};
 const LoginScreen = (props: MyProps) => {
@@ -20,6 +22,7 @@ const LoginScreen = (props: MyProps) => {
   const { username } = formValues;
   const handlerSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    
     if (username.trim() === "") {
       return;
     }

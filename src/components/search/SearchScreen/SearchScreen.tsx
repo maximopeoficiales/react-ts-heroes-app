@@ -1,13 +1,15 @@
 import queryString from "query-string";
 import { useMemo } from "react";
 import { RouteComponentProps, useLocation } from "react-router-dom";
-import { heroes } from "../../../data/heroes";
 import { useForm } from "../../../hooks/useForm";
 import { getHeroSearch } from "../../../selectors/getHeroSearch";
 import HeroCard from "../../heroes/HeroCard/HeroCard";
 import Container from "../../utils/Container/Container";
+import { History } from "history";
 
-interface MyProps extends RouteComponentProps<any> {}
+interface MyProps {
+  history: History;
+}
 const defaultProps = {};
 const SearchScreen = (props: MyProps) => {
   props = { ...defaultProps, ...props };
@@ -27,7 +29,7 @@ const SearchScreen = (props: MyProps) => {
     e.preventDefault();
     history.push(`?q=${search}`);
   };
-  console.log(heroes.length);
+  // console.log(heroes.length);
 
   return (
     <div data-testid="SearchScreen" className="p-4">
